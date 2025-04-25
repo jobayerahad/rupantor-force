@@ -1,21 +1,38 @@
 {
-  "name": "rupantor-force",
+  "name": "rupantor-force-web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3010",
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "12.1.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "sass": "^1.52.3"
+    "@mantine/code-highlight": "^7.17.5",
+    "@mantine/core": "^7.17.5",
+    "@mantine/dates": "^7.17.5",
+    "@mantine/dropzone": "^7.17.5",
+    "@mantine/form": "^7.17.5",
+    "@mantine/hooks": "^7.17.5",
+    "@mantine/modals": "^7.17.5",
+    "@mantine/notifications": "^7.17.5",
+    "@mantine/nprogress": "^7.17.5",
+    "axios": "^1.9.0",
+    "dayjs": "^1.11.13",
+    "framer-motion": "^12.9.2",
+    "next": "15.3.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
-    "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6"
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "postcss": "^8.5.3",
+    "postcss-preset-mantine": "^1.17.0",
+    "postcss-simple-vars": "^7.0.1",
+    "typescript": "^5"
   }
 }

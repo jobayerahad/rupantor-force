@@ -1,0 +1,45 @@
+.root {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.title {
+  font-size: var(--mantine-spacing-sm);
+  font-weight: 400;
+  color: var(--mantine-color-gray-3);
+  margin-bottom: var(--mantine-spacing-xs);
+}
+
+.text {
+  font-size: var(--mantine-spacing-xs);
+  color: var(--mantine-color-gray-5);
+}
+
+.link {
+  line-height: 1.6;
+  transition: 0.2s;
+
+  &:hover {
+    color: var(--mantine-color-gray-1);
+  }
+}
+
+.content {
+  gap: 0.25rem;
+  color: var(--mantine-color-gray-5);
+
+  & > * {
+    transition: 0.2s;
+
+    &:hover {
+      color: var(--mantine-color-gray-1);
+    }
+  }
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.5);
+  border-top: 1px solid var(--mantine-color-gray-7);
+  padding-top: var(--mantine-spacing-xs);
+  padding-bottom: var(--mantine-spacing-xs);
+}
