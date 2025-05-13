@@ -4,8 +4,8 @@ import { ReactNode } from 'react'
 import { Box } from '@mantine/core'
 import { ModalsProvider } from '@mantine/modals'
 
+import Header from './Header'
 import Footer from './Footer'
-import Navbar from './Navbar'
 
 type Props = {
   children: ReactNode
@@ -13,7 +13,7 @@ type Props = {
 
 const Structure = ({ children }: Props) => (
   <ModalsProvider>
-    <Navbar />
+    <Header />
 
     <Box component="main" mih="calc(100dvh - 32rem)">
       {children}

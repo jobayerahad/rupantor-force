@@ -10,6 +10,7 @@ import '@mantine/core/styles.css'
 import '@mantine/dates/styles.css'
 import '@mantine/notifications/styles.css'
 import '@mantine/nprogress/styles.css'
+import '@mantine/carousel/styles.css'
 import './globals.css'
 import Structure from './_layout/main'
 import { theme } from '@config/theme'
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   ...sharedMetadata({
     title: 'Rupantor Force Security Services Limited',
     description:
-      'Rupantor Force Security Services Limited is a private commercial bank in Bangladesh. We provide banking products and services to individuals, businesses, and corporate clients.',
+      'Rupantor Force Security Services Ltd., founded in 2022, is a new and dynamic security service provider in Bangladesh, committed to setting high standards in safety, professionalism, and reliability.',
     path: ''
   }),
   title: {
@@ -49,11 +50,11 @@ type Props = {
 const RootLayout = ({ children }: Props) => (
   <html lang="en" className={clsx(lato.variable, poppins.variable)} suppressHydrationWarning>
     <head>
-      <ColorSchemeScript defaultColorScheme="auto" />
+      <ColorSchemeScript defaultColorScheme="light" />
     </head>
 
     <body>
-      <MantineProvider theme={theme} defaultColorScheme="auto" classNamesPrefix="sbac">
+      <MantineProvider theme={theme} defaultColorScheme="light" classNamesPrefix="rfssl">
         <NavigationProgress />
         <Notifications />
 

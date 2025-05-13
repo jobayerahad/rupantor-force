@@ -90,7 +90,7 @@ const Footer = () => {
 
             <Group gap="xs" mb={8}>
               <LocationIcon size={18} />
-              <Text component={Link} href="https://maps.app.goo.gl/vEnypDzwCSoFzdfH6">
+              <Text component={Link} href="https://maps.app.goo.gl/qN9fFkSJRm71HEiJ6" target="_blank">
                 House No. 02 (3<sup>rd</sup> Floor),
                 <br /> Road No. 12, Rajuk R/A, <br />
                 Merul Badda, Dhaka-1212

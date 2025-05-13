@@ -12,6 +12,6 @@ export const sharedMetadata = ({ description, image, path, title }: SharedMetaDa
     url: new URL(`https://www.rupantorforce.com/${path}`),
     countryName: 'Bangladesh',
     determiner: 'the',
-    images: image || '/images/logo.png'
+    images: image || '/logo.png'
   }
 })
