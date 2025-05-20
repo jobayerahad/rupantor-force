@@ -1,6 +1,27 @@
-.root {
-  padding-top: 2rem;
+.background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background-color: #120c0c;
+  z-index: -1;
+}
+
+.topBar {
+  padding-top: 3rem;
   padding-bottom: 1.5rem;
+}
+
+.container {
+  background: url(/footer-bg.jpg) no-repeat center center;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  z-index: 1;
+
+  @media screen and (max-width: 480px) {
+    background: none;
+  }
 }
 
 .title {
@@ -17,6 +38,7 @@
 
 .link {
   line-height: 1.6;
+  color: var(--mantine-color-gray-5);
   transition: 0.2s;
 
   &:hover {

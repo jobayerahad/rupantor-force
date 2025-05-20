@@ -1,18 +1,19 @@
 'use client'
 
-import { Container, Flex, Image, Title } from '@mantine/core'
+import HomeCarousel from './_home/carousel'
+import HomeAbout from './_home/about'
+import HomeServices from './_home/services'
+import HomeClients from './_home/clients'
+import HomeCta from './_home/cta'
 
-const Home = () => {
-  return (
-    <Container mb="xl">
-      <Flex direction="column" align="center" justify="center">
-        <Image src="/under-development.png" alt="Under Development" h={500} w="auto" />
-        <Title ta="center" c="gray.7">
-          This website is under development
-        </Title>
-      </Flex>
-    </Container>
-  )
-}
+const Home = () => (
+  <>
+    <HomeCarousel />
+    <HomeAbout />
+    <HomeServices />
+    <HomeClients />
+    <HomeCta />
+  </>
+)
 
 export default Home
