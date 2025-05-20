@@ -10,7 +10,6 @@ import {
   SimpleGrid,
   Text,
   Title,
-  Tooltip,
   Transition
 } from '@mantine/core'
 import { useWindowScroll } from '@mantine/hooks'
@@ -25,40 +24,33 @@ const Footer = () => {
   const [scroll, scrollTo] = useWindowScroll()
 
   return (
-    <Box component="footer" bg="#252525">
-      <Container size="lg">
-        <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="xs" className={classes.root}>
+    <Box component="footer" pos="relative">
+      <Box className={classes.background} />
+
+      <Container size="lg" className={classes.container}>
+        <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="xs" className={classes.topBar}>
           <div className={classes.text}>
             <Link href="/">
               <Image
                 src="/logo.png"
                 alt="Rupantor Force Security Services Ltd."
                 w="auto"
-                h={100}
+                h={120}
                 fit="contain"
-                mb={8}
+                mb="xs"
+                mx="auto"
               />
 
-              <Title order={2} c="gray.3" size={22}>
+              <Title order={2} c="gray.3" size={22} ta="center" mb={8}>
                 Rupantor Force
                 <br />
                 Security Services Ltd.
               </Title>
-            </Link>
 
-            <Group mt="xs" gap={8} justify="space-between">
-              <Tooltip label="Facebook" position="bottom" withArrow>
-                <ActionIcon
-                  component={Link}
-                  href="https://www.facebook.com/rupantorforce"
-                  target="_blank"
-                  size="lg"
-                  radius="xl"
-                >
-                  <FbIcon />
-                </ActionIcon>
-              </Tooltip>
-            </Group>
+              <Text color="#B1B1B1" ta="center" size="sm">
+                (A New Standard in Security Services)
+              </Text>
+            </Link>
           </div>
 
           <div>
@@ -89,8 +81,14 @@ const Footer = () => {
             </Title>
 
             <Group gap="xs" mb={8}>
-              <LocationIcon size={18} />
-              <Text component={Link} href="https://maps.app.goo.gl/qN9fFkSJRm71HEiJ6" target="_blank">
+              <LocationIcon size={18} color="#B1B1B1" />
+
+              <Text
+                component={Link}
+                href="https://maps.app.goo.gl/qN9fFkSJRm71HEiJ6"
+                target="_blank"
+                className={classes.link}
+              >
                 House No. 02 (3<sup>rd</sup> Floor),
                 <br /> Road No. 12, Rajuk R/A, <br />
                 Merul Badda, Dhaka-1212
@@ -98,7 +96,7 @@ const Footer = () => {
             </Group>
 
             <Group gap="xs" mb={4}>
-              <PhoneIcon size={18} />
+              <PhoneIcon size={18} color="#B1B1B1" />
 
               <div>
                 <Text component={Link} className={classes.link} href="tel:+8801721871675">
@@ -112,16 +110,24 @@ const Footer = () => {
             </Group>
 
             <Group gap="xs" mb={4}>
-              <MailIcon size={18} />
+              <FbIcon size={18} color="#B1B1B1" />
+
+              <Text component={Link} className={classes.link} href="https://www.facebook.com/rupantorforce">
+                fb.com/rupantorforce
+              </Text>
+            </Group>
+
+            <Group gap="xs" mb={4}>
+              <MailIcon size={18} color="#B1B1B1" />
 
               <div>
                 <Text component={Link} className={classes.link} href="mailto:contact@rupantorforce.com">
                   contact@rupantorforce.com
                 </Text>
-                <br />
+                {/* <br />
                 <Text component={Link} className={classes.link} href="mailto:rupantorforce@gmail.com">
                   rupantorforce@gmail.com
-                </Text>
+                </Text> */}
               </div>
             </Group>
           </div>

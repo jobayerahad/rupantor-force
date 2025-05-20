@@ -28,8 +28,8 @@ a {
 }
 
 .section {
-  padding-top: 3.5rem;
-  padding-bottom: 4rem;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
 
   @media only screen and (max-width: 37.5em) {
     padding-top: 2.5rem;
@@ -38,18 +38,34 @@ a {
 }
 
 .section-clean {
-  background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-7));
+  background-color: var(--mantine-color-gray-0);
 }
 
-.carousel-bottom .ob-Carousel-indicators {
-  position: unset;
+.heading {
+  font-size: 2.5rem;
+  color: #000;
+
+  span {
+    color: #5b2020;
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    font-size: 1.75rem;
+  }
 }
 
-.ob-Carousel-indicator {
-  background-color: light-dark(var(--mantine-color-dark-3), var(--mantine-color-gray-4));
-  transition: width 250ms ease;
+.title {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  color: #000;
+}
 
-  &[data-active] {
-    width: 40px;
+.text {
+  color: #626262;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .rfssl-Carousel-container .rfssl-Image-root {
+    height: 100% !important;
   }
 }

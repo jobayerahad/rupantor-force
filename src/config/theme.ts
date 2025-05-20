@@ -1,8 +1,8 @@
 import { createTheme } from '@mantine/core'
 
 export const theme = createTheme({
-  defaultGradient: { from: '#C93D76', to: '#8D2C8B', deg: 60 },
-  defaultRadius: 'md',
+  defaultGradient: { from: '#A55052', to: '#542E2E', deg: 60 },
+  defaultRadius: 'lg',
   cursorType: 'pointer',
   autoContrast: true,
   luminanceThreshold: 0.45,
