@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 import { ReactNode } from 'react'
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { MantineProvider, ColorSchemeScript } from '@mantine/core'
 import { NavigationProgress } from '@mantine/nprogress'
 import { Notifications } from '@mantine/notifications'
@@ -60,6 +61,25 @@ const RootLayout = ({ children }: Props) => (
 
         <Structure>{children}</Structure>
       </MantineProvider>
+
+      {process.env.NODE_ENV === 'production' && (
+        <>
+          <Script
+            async
+            strategy="lazyOnload"
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
+          />
+          <Script strategy="lazyOnload" id="RFSSL-GA">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+          
+              gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}');
+            `}
+          </Script>
+        </>
+      )}
     </body>
   </html>
 )
