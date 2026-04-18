@@ -1,10 +1,4 @@
-'use client'
-
-import HomeCarousel from './_home/carousel'
-import HomeAbout from './_home/about'
-import HomeServices from './_home/services'
-import HomeClients from './_home/clients'
-import HomeCta from './_home/cta'
+import { HomeAbout, HomeCarousel, HomeClients, HomeCta, HomeServices } from '@components/home'
 
 const Home = () => (
   <>

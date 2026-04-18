@@ -41,7 +41,7 @@ const Header = () => {
                 Home
               </Link>
 
-              <Menu trigger="hover" withArrow>
+              <Menu trigger="hover" radius="md" withArrow>
                 <Menu.Target>
                   <Text className={classes.link}>About Us</Text>
                 </Menu.Target>

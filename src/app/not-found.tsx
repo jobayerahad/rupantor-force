@@ -22,7 +22,7 @@ const NotFound = () => (
         </Group>
       </Stack>
 
-      <Image src="/images/not-found.svg" alt="404" />
+      <Image src="/not-found.svg" alt="404" />
     </SimpleGrid>
   </Container>
 )

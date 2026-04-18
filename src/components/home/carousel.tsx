@@ -4,9 +4,9 @@ import { Carousel } from '@mantine/carousel'
 import { Box, Image, SimpleGrid, Text, Title } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 
-import classes from '../page.module.css'
+import classes from './home.module.css'
 
-const HomeCarousel = () => {
+export const HomeCarousel = () => {
   const autoplay = useRef(Autoplay({ delay: 2500 }))
   const isMobile = useMediaQuery('(max-width: 37.5rem)')
 
@@ -34,7 +34,7 @@ const HomeCarousel = () => {
                 <span>Security</span> Service Force
               </Title>
 
-              <Text>
+              <Text visibleFrom="md">
                 Dedicated to protecting what matters most — with integrity, vigilance, and unmatched professionalism.
                 <br />
                 From homes to high-rise offices, we deliver security you can trust, every time.
@@ -46,5 +46,3 @@ const HomeCarousel = () => {
     </Carousel>
   )
 }
-
-export default HomeCarousel

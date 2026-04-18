@@ -5,7 +5,7 @@ import { Button, Container, Group } from '@mantine/core'
 import { BiReset as ResetIcon } from 'react-icons/bi'
 import { TiArrowBack as BackIcon } from 'react-icons/ti'
 
-import ErrorMsg from './_common/error-msg'
+import ErrorMsg from '@components/common/error-msg'
 
 type Props = {
   error: Error

@@ -1,6 +1,6 @@
 import { Container, Grid, Image, Paper, SimpleGrid, Text, Title } from '@mantine/core'
 
-const HomeAbout = () => (
+export const HomeAbout = () => (
   <Container size="lg" className="section">
     <Grid>
       <Grid.Col span={{ base: 12, md: 4 }} visibleFrom="md">
@@ -47,5 +47,3 @@ const HomeAbout = () => (
     </Grid>
   </Container>
 )
-
-export default HomeAbout

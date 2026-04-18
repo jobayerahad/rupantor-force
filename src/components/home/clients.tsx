@@ -1,6 +1,6 @@
 import { Badge, Box, Container, Flex, SimpleGrid, Text, Title } from '@mantine/core'
 
-const HomeClients = () => (
+export const HomeClients = () => (
   <Box
     style={{
       backgroundImage: 'url(/clients-bg.jpg)',
@@ -40,5 +40,3 @@ const HomeClients = () => (
     </Container>
   </Box>
 )
-
-export default HomeClients

@@ -15,9 +15,7 @@ const Structure = ({ children }: Props) => (
   <ModalsProvider>
     <Header />
 
-    <Box component="main" mih="calc(100dvh - 32rem)">
-      {children}
-    </Box>
+    <Box component="main">{children}</Box>
 
     <Footer />
   </ModalsProvider>

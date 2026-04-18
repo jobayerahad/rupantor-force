@@ -1,7 +1,7 @@
 import { Button, Container, Paper, SimpleGrid, Text, Title } from '@mantine/core'
 import { FaArrowRightLong as ArrowIcon } from 'react-icons/fa6'
 
-const HomeServices = () => (
+export const HomeServices = () => (
   <section className="section section-clean">
     <Container size="lg">
       <Title order={2} mb="sm" className="heading">
@@ -52,5 +52,3 @@ const HomeServices = () => (
     </Container>
   </section>
 )
-
-export default HomeServices

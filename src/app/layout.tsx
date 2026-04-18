@@ -13,7 +13,8 @@ import '@mantine/notifications/styles.css'
 import '@mantine/nprogress/styles.css'
 import '@mantine/carousel/styles.css'
 import './globals.css'
-import Structure from './_layout/main'
+
+import Structure from '@components/layout/main'
 import { theme } from '@config/theme'
 import { sharedMetadata } from '@config/meta'
 

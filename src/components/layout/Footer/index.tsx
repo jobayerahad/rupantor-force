@@ -10,6 +10,7 @@ import {
   SimpleGrid,
   Text,
   Title,
+  Tooltip,
   Transition
 } from '@mantine/core'
 import { useWindowScroll } from '@mantine/hooks'
@@ -46,11 +47,11 @@ const Footer = () => {
                 <br />
                 Security Services Ltd.
               </Title>
-
-              <Text color="#B1B1B1" ta="center" size="sm">
-                (A New Standard in Security Services)
-              </Text>
             </Link>
+
+            <Text c="#B1B1B1" ta="center" size="sm">
+              A New Standard in Security Services
+            </Text>
           </div>
 
           <div>
@@ -68,7 +69,7 @@ const Footer = () => {
                 { title: 'Privacy Policy', url: '/privacy-policy' },
                 { title: 'Terms & Conditions', url: '/terms-conditions' }
               ].map(({ url, title }, index) => (
-                <Text component={Link} href={url} key={index}>
+                <Text component={Link} href={url} className={classes.link} key={index}>
                   {title}
                 </Text>
               ))}
@@ -120,22 +121,16 @@ const Footer = () => {
             <Group gap="xs" mb={4}>
               <MailIcon size={18} color="#B1B1B1" />
 
-              <div>
-                <Text component={Link} className={classes.link} href="mailto:contact@rupantorforce.com">
-                  contact@rupantorforce.com
-                </Text>
-                {/* <br />
-                <Text component={Link} className={classes.link} href="mailto:rupantorforce@gmail.com">
-                  rupantorforce@gmail.com
-                </Text> */}
-              </div>
+              <Text component={Link} className={classes.link} href="mailto:contact@rupantorforce.com">
+                contact@rupantorforce.com
+              </Text>
             </Group>
           </div>
         </SimpleGrid>
 
         <Box className={classes.copyright}>
           <Text size="sm" c="gray.5" ta="center">
-            &copy; 2021 - {new Date().getFullYear()}&nbsp;
+            &copy; 2022 - {new Date().getFullYear()}&nbsp;
             <Text component={Link} href="/" className={classes.link}>
               Rupantor Force Security Services Ltd.
             </Text>
@@ -147,9 +142,11 @@ const Footer = () => {
       <Affix position={{ bottom: 20, right: 20 }}>
         <Transition transition="slide-up" mounted={scroll.y > 250}>
           {(transitionStyles) => (
-            <ActionIcon style={transitionStyles} onClick={() => scrollTo({ y: 0 })}>
-              <TopIcon />
-            </ActionIcon>
+            <Tooltip withArrow label="Back to top">
+              <ActionIcon style={transitionStyles} onClick={() => scrollTo({ y: 0 })}>
+                <TopIcon />
+              </ActionIcon>
+            </Tooltip>
           )}
         </Transition>
       </Affix>
